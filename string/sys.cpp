@@ -36,3 +36,15 @@ std::string ChangeWordToBig(std::string line) {
     }
     return line;
 }
+
+/***************************exercises***********************/
+/*
+* P86, 3.6
+*/
+std::string ChangeChacterWithX(std::string line) {
+    decltype (line.size()) temp = 'X';
+    for (auto &c : line) {
+        c = temp;
+    }
+    return line;
+}
