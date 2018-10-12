@@ -18,4 +18,8 @@ std::string ReadOneLine ();
 void ReadOneWord (std::string word);
 unsigned int Characterscount(std::string line);
 std::string ChangeWordToBig(std::string line);
+
+/***************************exercises***********************/
+std::string ChangeChacterWithX(std::string line);
+std::string RemoveSpace(std::string line);
 #endif
