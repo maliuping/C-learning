@@ -11,6 +11,11 @@ int main() {
 
     std::cout<< ChangeWordToBig(line1) <<std::endl;
     std::cout<< ChangeChacterWithX(line1) <<std::endl;
+    std::cout<< RemoveSpace(line1) <<std::endl;
 
+    const std::string s = "Keep out!";
+    for (auto &c : s) {
+        /**/
+    }
     return 0;
 }
