@@ -23,6 +23,13 @@ namespace merbok {
          * P91:3.14; 3.15
          */
         Status StoreToVector(std::vector <std::string> &text);
+
+        /**
+         * exercise
+         * P93:scores
+         */
+        Status ScoresCount(std::vector<unsigned> &scores);
     };
+
 }
 #endif

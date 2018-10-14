@@ -14,4 +14,26 @@ namespace merbok {
             }
         }
     }
+
+    /**
+     * exercise
+     * P93:scores
+     */
+    Status merbok::Store::ScoresCount(std::vector<unsigned> &scores) {
+        unsigned temp,j=0;
+
+        while(std::cin >> temp) {
+            if (temp <= 100) {
+                scores[temp/10]++;
+                j++;
+            }
+            if (j == 11) {
+                std::cout <<"j==11"<<std::endl;
+                j = 0;
+                return OK;
+            }
+        }
+
+    }
+
 }
