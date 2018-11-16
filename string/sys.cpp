@@ -36,3 +36,28 @@ std::string ChangeWordToBig(std::string line) {
     }
     return line;
 }
+
+/***************************exercises***********************/
+/**
+ * P86, 3.6
+ */
+std::string ChangeChacterWithX(std::string line) {
+    //decltype (line.size()) temp = 'X';
+    char temp = 'X';
+    for (auto &c : line) {
+        c = temp;
+    }
+    return line;
+}
+
+/**
+ * P86, 3.10
+ */
+std::string RemoveSpace(std::string line) {
+    for (auto &c : line) {
+        if (ispunct(c)) {
+            c = ' ';
+        }
+    }
+    return line;
+}
