@@ -1,0 +1,191 @@
+From 0bab78a8fb3daac8b08475b9cc2908626ed71d23 Mon Sep 17 00:00:00 2001
+From: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date: Fri, 9 Feb 2018 09:54:52 +0800
+Subject: [PATCH] fastrvc: add fastrvc selinux initflow
+
+add fastrvc selinux initflow
+Test: run on 2712
+
+Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+CR-Id: AUTO00011266
+---
+ device.mk          |   2 +-
+ fastrvc.rc         |   4 --
+ sepolicy/kernel.te | 135 ++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 3 files changed, 135 insertions(+), 6 deletions(-)
+
+diff --git a/device.mk b/device.mk
+index dbc3443..ae5d6e3 100644
+--- a/device.mk
++++ b/device.mk
+@@ -253,9 +253,9 @@ PRODUCT_PACKAGES += \
+      android.hardware.boot@1.0-service
+ 
+ #fastrvc
++PRODUCT_PACKAGES += initfastrvc
+ PRODUCT_PACKAGES += \
+     initforfastrvc \
+-    fastrvc \
+     fastrvc_config.xml \
+     mediatek_logo_1920x1080.ppm \
+     mtk_parsed.h264
+diff --git a/fastrvc.rc b/fastrvc.rc
+index f7a1309..e69de29 100644
+--- a/fastrvc.rc
++++ b/fastrvc.rc
+@@ -1,4 +0,0 @@
+-service fastrvc /system/bin/fastrvc /system/etc/fastlogo_file/fastrvc_config.xml
+-	class main
+-	critical
+-	group root system
+diff --git a/sepolicy/kernel.te b/sepolicy/kernel.te
+index f32f405..10280bd 100644
+--- a/sepolicy/kernel.te
++++ b/sepolicy/kernel.te
+@@ -1,9 +1,142 @@
+ allow kernel device:chr_file { getattr create setattr};
+ allow kernel device:dir write;
+-allow kernel self:capability { mknod };
++allow kernel self:capability { mknod sys_admin };
+ allow kernel device:dir add_name;
+ allow kernel device:blk_file { create setattr getattr };
+ allow kernel storage_file:dir { search };
++allow kernel tmpfs:dir { search };
++allow kernel rootfs:chr_file { write };
++
++allow kernel gpu_device:chr_file { read write ioctl open getattr };
++allow kernel video_device:chr_file { read write ioctl open getattr };
++allow kernel mdpd_device:chr_file { read write ioctl open };
++allow kernel vpud_device:chr_file { read open };
++allow kernel sysfs:file { read open getattr write create ioctl };
++allow kernel sysfs:dir { write add_name };
++allow kernel shell_exec:file { execute read open getattr };
++allow kernel init:dir { search };
++allow kernel init:file { open read getattr };
++allow kernel kernel:dir { search };
++allow kernel kernel:file { open read getattr };
++allow kernel ueventd:dir { search };
++allow kernel ueventd:file { read open getattr};
++allow kernel logd:dir { search };
++allow kernel logd:file { open read getattr };
++allow kernel servicemanager:dir { search };
++allow kernel servicemanager:file { open read getattr };
++allow kernel hwservicemanager:dir { search };
++allow kernel hwservicemanager:file { open read getattr };
++allow kernel vndservicemanager:dir { search };
++allow kernel vndservicemanager:file { open read getattr };
++allow kernel hal_bootctl_default:dir { search };
++allow kernel hal_bootctl_default:file { open read getattr };
++allow kernel hal_keymaster_default:dir { search };
++allow kernel hal_keymaster_default:file { open read getattr };
++allow kernel vold:dir { search };
++allow kernel vold:file { read open getattr };
++
++allow kernel self:capability { sys_admin };
++allow kernel system_file:file { ioctl };
++allow kernel system_app:dir { search };
++allow kernel crash_dump:dir { search };
++allow kernel zygote:dir { search };
++allow kernel priv_app:dir { search };
++allow kernel priv_app:file { read open getattr };
++allow kernel platform_app:dir { search };
++allow kernel platform_app:file { read open getattr };
++allow kernel bluetooth:dir { search };
++allow kernel crash_dump:file { read open getattr };
++allow kernel bluetooth:file { read open getattr };
++allow kernel shell:dir { search };
++allow kernel shell:file {  read open getattr };
++allow kernel zygote:file { read open getattr };
++allow kernel netd:dir { search };
++allow kernel hal_audio_default:dir { search };
++allow kernel hal_vehicle_default:dir { search };
++allow kernel hal_bluetooth_default:dir { search };
++allow kernel hal_configstore_default:dir { search };
++allow kernel hal_graphics_allocator_default:dir { search };
++allow kernel hal_graphics_composer_default:dir { search };
++allow kernel hal_light_default:dir { search };
++allow kernel hal_memtrack_default:dir { search };
++allow kernel untrusted_app_25:dir { search };
++allow kernel untrusted_app_25:file { read open getattr };
++allow kernel webview_zygote:dir { search };
++allow kernel system_app:file { read open getattr };
++allow kernel radio:dir { search };
++allow kernel bootstat:dir { search };
++allow kernel untrusted_app:dir { search };
++allow kernel untrusted_app:file { read open getattr };
++allow kernel netd:file { read open getattr };
++allow kernel hal_audio_default:file { read open getattr };
++allow kernel hal_vehicle_default:file { read open getattr };
++allow kernel hal_bluetooth_default:file { read open getattr };
++allow kernel hal_configstore_default:file { read open getattr };
++allow kernel hal_drm_default:dir { search };
++allow kernel hal_graphics_allocator_default:file { read open getattr  };
++allow kernel hal_graphics_composer_default:file { read open getattr  };
++allow kernel hal_light_default:file { read open getattr  };
++allow kernel hal_memtrack_default:file { read open getattr  };
++allow kernel hal_sensors_default:dir { search };
++allow kernel hal_usb_default:dir { search };
++allow kernel hal_wifi_default:dir { search };
++allow kernel healthd:dir { search };
++allow kernel watchdogd:dir { search };
++allow kernel wmt_launcher:dir { search };
++allow kernel wmt_launcher:file { read open getattr  };
++allow kernel lmkd:dir { search };
++allow kernel surfaceflinger:dir { search };
++allow kernel mdpd_native:dir { search };
++allow kernel adbd:dir { search };
++allow kernel mnld:dir { search };
++allow kernel dex2oat:dir { search read };
++allow kernel installd:dir { search };
++allow kernel webview_zygote:file { read open getattr };
++allow kernel shared_relro:dir { search };
++allow kernel radio:file { read open getattr };
++allow kernel sdcardd:dir { search };
++allow kernel shared_relro:file { read open getattr };
++allow kernel bootstat:file { read open getattr };
++allow kernel dex2oat:file { read open getattr };
++allow kernel installd:file { read open getattr  };
++allow kernel sdcardd:file { read open getattr };
++allow kernel hal_drm_default:file { read open getattr };
++allow kernel hal_sensors_default:file { read open getattr };
++allow kernel hal_thermal_default:dir { search };
++allow kernel hal_thermal_default:file { read open getattr };
++allow kernel hal_usb_default:file { read open getattr };
++allow kernel hal_wifi_default:file { read open getattr };
++allow kernel healthd:file { read open getattr };
++allow kernel watchdogd:file { read open getattr };
++allow kernel lmkd:file { read open getattr };
++allow kernel surfaceflinger:file { read open getattr };
++allow kernel mdpd_native:file { read open getattr };
++allow kernel adbd:file { read open getattr };
++allow kernel mnld:file { read open getattr };
++allow kernel audioserver:file { read open getattr };
++allow kernel audioserver:dir { search read };
++allow kernel cameraserver:file { read open getattr };
++allow kernel cameraserver:dir { search read };
++allow kernel drmserver:file { read open getattr };
++allow kernel drmserver:dir { search read };
++allow kernel keystore:file { read open getattr };
++allow kernel keystore:dir { search read };
++allow kernel mediadrmserver:file { read open getattr };
++allow kernel mediadrmserver:dir { search read };
++allow kernel mediametrics:file { read open getattr };
++allow kernel mediametrics:dir { search read };
++allow kernel mediaserver:file { read open getattr };
++allow kernel mediaserver:dir { search read };
++allow kernel vpud_native:file { read open getattr };
++allow kernel vpud_native:dir { search read };
++allow kernel gatekeeperd:file { read open getattr };
++allow kernel gatekeeperd:dir { search read };
++allow kernel tombstoned:file { read open getattr };
++allow kernel tombstoned:dir { search read };
++allow kernel bootanim:file { read open getattr };
++allow kernel bootanim:dir { search read };
++allow kernel system_server:file { read open getattr };
++allow kernel system_server:dir { search read };
+ #allow kernel kernel:capability { dac_override dac_read_search };
+ allow kernel vendor_file:file { read open };
+ allow kernel device:dir { remove_name };
+-- 
+1.9.1
+

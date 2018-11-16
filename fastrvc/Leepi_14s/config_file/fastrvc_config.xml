@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<rear_camera>camera_auto_detection</rear_camera>
+	<static_logo>ppm_logo</static_logo>
+	<animated_logo>h264_logo</animated_logo>
+
+	<camera_auto_detection>
+		<camera dev_name="mipicsi1" link_name="mipicsi1_camera"/>
+		<camera dev_name="mipicsi0" link_name="mipicsi0_camera"/>
+		<camera dev_name="mtk-tvd" link_name="tvd_camera"/>
+	</camera_auto_detection>
+
+	<mipicsi0_camera>
+		<module name="fourinone_camera" dev_name="mipicsi0">
+			<config name="camera_index" type="int" value="0"/>
+			<config name="out_buff.count" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="3"/>
+			<config name="cap_buff.width" type="int" value="1280"/>
+			<config name="cap_buff.height" type="int" value="720"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="YUYV"/>
+			<config name="cap_buff.buffer_type" type="int" value="1"/>
+			<config name="cap_buff.pix_field" type="int" value="4"/>
+		</module>
+		<module name="va2list">
+			<config name="width" type="int" value="1280"/>
+			<config name="height" type="int" value="720"/>
+			<config name="pix_format" type="V4L2" value="YUYV"/>
+		</module>
+		<module name="v4l2_mdp" dev_name="mtk-mdp">
+			<config name="out_buff.count" type="int" value="3"/>
+			<config name="out_buff.pix_field" type="int" value="1"/>
+			<config name="out_buff.pix_format" type="V4L2" value="YUYV"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="1280"/>
+			<config name="out_buff.height" type="int" value="720"/>
+			<config name="out_buff.rotation" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="3"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="ABGR8888"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="1920"/>
+			<config name="cap_buff.height" type="int" value="1080"/>
+		</module>
+		<module name="list2va">
+			<config name="width" type="int" value="1920"/>
+			<config name="height" type="int" value="1080"/>
+			<config name="pix_format" type="V4L2" value="ARGB8888"/>
+		</module>
+		<module name="drm">
+			<config name="src_w" type="int" value="1920"/>
+			<config name="src_h" type="int" value="1080"/>
+			<config name="dst_w" type="int" value="1920"/>
+			<config name="dst_h" type="int" value="1080"/>
+			<config name="fourcc" type="DRM" value="ARGB8888"/>
+			<config name="plane_number" type="int" value="3"/>
+		</module>
+	</mipicsi0_camera>
+
+	<mipicsi1_camera>
+		<module name="fourinone_camera" dev_name="mipicsi1">
+			<config name="camera_index" type="int" value="0"/>
+			<config name="out_buff.count" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="6"/>
+			<config name="cap_buff.width" type="int" value="1280"/>
+			<config name="cap_buff.height" type="int" value="720"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="YUYV"/>
+			<config name="cap_buff.buffer_type" type="int" value="1"/>
+			<config name="cap_buff.pix_field" type="int" value="4"/>
+		</module>
+		<module name="va2list">
+			<config name="width" type="int" value="1280"/>
+			<config name="height" type="int" value="720"/>
+			<config name="pix_format" type="V4L2" value="YUYV"/>
+		</module>
+		<module name="v4l2_mdp" dev_name="mtk-mdp">
+			<config name="out_buff.count" type="int" value="3"/>
+			<config name="out_buff.pix_field" type="int" value="1"/>
+			<config name="out_buff.pix_format" type="V4L2" value="YUYV"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="1280"/>
+			<config name="out_buff.height" type="int" value="720"/>
+			<config name="out_buff.rotation" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="3"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="ABGR8888"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="1920"/>
+			<config name="cap_buff.height" type="int" value="1080"/>
+		</module>
+		<module name="list2va">
+			<config name="width" type="int" value="1920"/>
+			<config name="height" type="int" value="1080"/>
+			<config name="pix_format" type="V4L2" value="ARGB8888"/>
+		</module>
+		<module name="drm">
+			<config name="src_w" type="int" value="1920"/>
+			<config name="src_h" type="int" value="1080"/>
+			<config name="dst_w" type="int" value="1920"/>
+			<config name="dst_h" type="int" value="1080"/>
+			<config name="fourcc" type="DRM" value="ARGB8888"/>
+			<config name="plane_number" type="int" value="3"/>
+		</module>
+	</mipicsi1_camera>
+
+	<tvd_camera>
+		<module name="v4l2_camera" dev_name="mtk-tvd">
+			<config name="out_buff.count" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="3"/>
+			<config name="cap_buff.width" type="int" value="720"/>
+			<config name="cap_buff.height" type="int" value="480"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.pix_field" type="int" value="8"/>
+		</module>
+		<module name="v4l2_nr" dev_name="mtk-nr">
+			<config name="out_buff.count" type="int" value="3"/>
+			<config name="out_buff.pix_field" type="int" value="8"/>
+			<config name="out_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="720"/>
+			<config name="out_buff.height" type="int" value="480"/>
+			<config name="cap_buff.count" type="int" value="3"/>
+			<config name="cap_buff.pix_field" type="int" value="8"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="720"/>
+			<config name="cap_buff.height" type="int" value="480"/>
+			<config name="bnr_level" type="int" value="3"/>
+			<config name="mnr_level" type="int" value="3"/>
+			<config name="fnr_level" type="int" value="0"/>
+		</module>
+		<module name="v4l2" dev_name="mtk-di">
+			<config name="out_buff.count" type="int" value="3"/>
+			<config name="out_buff.pix_field" type="int" value="8"/>
+			<config name="out_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="720"/>
+			<config name="out_buff.height" type="int" value="480"/>
+			<config name="cap_buff.count" type="int" value="6"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="NV16M"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="720"/>
+			<config name="cap_buff.height" type="int" value="480"/>
+		</module>
+		<module name="v4l2_mdp" dev_name="mtk-mdp">
+			<config name="out_buff.count" type="int" value="6"/>
+			<config name="out_buff.pix_field" type="int" value="1"/>
+			<config name="out_buff.pix_format" type="V4L2" value="NV16M"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="720"/>
+			<config name="out_buff.height" type="int" value="480"/>
+			<config name="out_buff.rotation" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="3"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="ABGR8888"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="1280"/>
+			<config name="cap_buff.height" type="int" value="720"/>
+			<config name="shp_enable" type="int" value="1"/>
+			<config name="shp_level" type="int" value="10"/>
+			<config name="dc_enable" type="int" value="1"/>
+		</module>
+		<module name="list2va">
+			<config name="width" type="int" value="1280"/>
+			<config name="height" type="int" value="720"/>
+			<config name="pix_format" type="V4L2" value="ARGB8888"/>
+		</module>
+		<module name="ovl">
+			<config name="guideline_file" type="string" value="/fastlogo_file/720-1280.jpg.argb.bin"/>
+			<config name="ovl0.enable" type="int" value="1"/>
+			<config name="ovl0.width" type="int" value="1280"/>
+			<config name="ovl0.height" type="int" value="720"/>
+			<config name="ovl0.pix_format" type="V4L2" value="ARGB8888"/>
+			<config name="ovl0.buffer_type" type="int" value="10"/>
+			<config name="ovl0.buffer_count" type="int" value="3"/>
+			<config name="ovl0.plane_count" type="int" value="1"/>
+			<config name="ovl1.enable" type="int" value="1"/>
+			<config name="ovl1.width" type="int" value="1280"/>
+			<config name="ovl1.height" type="int" value="720"/>
+			<config name="ovl1.pix_format" type="V4L2" value="ARGB8888"/>
+			<config name="ovl1.buffer_type" type="int" value="10"/>
+			<config name="ovl1.buffer_count" type="int" value="3"/>
+			<config name="ovl1.plane_count" type="int" value="1"/>
+			<config name="wdma.enable" type="int" value="1"/>
+			<config name="wdma.width" type="int" value="1280"/>
+			<config name="wdma.height" type="int" value="720"/>
+			<config name="wdma.pix_format" type="V4L2" value="ARGB8888"/>
+			<config name="wdma.buffer_type" type="int" value="9"/>
+			<config name="wdma.buffer_count" type="int" value="3"/>
+			<config name="wdma.plane_count" type="int" value="1"/>
+			<config name="transition.area.width" type="int" value="1280"/>
+			<config name="transition.area.height" type="int" value="720"/>
+			<config name="input0.area.width" type="int" value="1280"/>
+			<config name="input0.area.height" type="int" value="720"/>
+			<config name="input1.area.width" type="int" value="1280"/>
+			<config name="input1.area.height" type="int" value="720"/>
+			<config name="input0.coordinate.top" type="int" value="0"/>
+			<config name="input0.coordinate.left" type="int" value="0"/>
+			<config name="input1.coordinate.top" type="int" value="0"/>
+			<config name="input1.coordinate.left" type="int" value="0"/>
+			<config name="transition0.coordinate.top" type="int" value="0"/>
+			<config name="transition0.coordinate.left" type="int" value="0"/>
+			<config name="transition1.coordinate.top" type="int" value="0"/>
+			<config name="transition1.coordinate.left" type="int" value="0"/>
+			<config name="output.area.width" type="int" value="1280"/>
+			<config name="output.area.height" type="int" value="720"/>
+			<config name="output.coordinate.top" type="int" value="0"/>
+			<config name="output.coordinate.left" type="int" value="0"/>
+		</module>
+		<module name="drm">
+			<config name="src_w" type="int" value="1280"/>
+			<config name="src_h" type="int" value="720"/>
+			<config name="dst_w" type="int" value="1280"/>
+			<config name="dst_h" type="int" value="720"/>
+			<config name="fourcc" type="DRM" value="ARGB8888"/>
+			<config name="plane_number" type="int" value="2"/>
+		</module>
+	</tvd_camera>
+
+	<h264_logo>
+		<module name="h264_logo">
+			<config name="name" type="string" value="/fastlogo_file/Panasonic_opening.h264"/>
+			<config name="frame_rate" type="int" value="25"/>
+		</module>
+		<module name="v4l2_codec" dev_name="mtk-vcodec-dec">
+			<config name="out_buff.count" type="int" value="5"/>
+			<config name="out_buff.pix_field" type="int" value="1"/>
+			<config name="out_buff.pix_format" type="V4L2" value="H264"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="1280"/>
+			<config name="out_buff.height" type="int" value="736"/>
+			<config name="out_buff.rotation" type="int" value="0"/>
+			<config name="cap_buff.count" type="int" value="10"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="1280"/>
+			<config name="cap_buff.height" type="int" value="736"/>
+		</module>
+		<module name="v4l2_mdp" dev_name="mtk-mdp">
+			<config name="out_buff.count" type="int" value="6"/>
+			<config name="out_buff.pix_field" type="int" value="1"/>
+			<config name="out_buff.pix_format" type="V4L2" value="MT21"/>
+			<config name="out_buff.buffer_type" type="int" value="10"/>
+			<config name="out_buff.width" type="int" value="1280"/>
+			<config name="out_buff.height" type="int" value="736"/>
+			<config name="out_buff.rotation" type="int" value="0"/>
+			<config name="out_buff.crop.c.width" type="int" value="1280"/>
+			<config name="out_buff.crop.c.height" type="int" value="720"/>
+			<config name="cap_buff.count" type="int" value="6"/>
+			<config name="cap_buff.pix_field" type="int" value="1"/>
+			<config name="cap_buff.pix_format" type="V4L2" value="YUYV"/>
+			<config name="cap_buff.buffer_type" type="int" value="9"/>
+			<config name="cap_buff.width" type="int" value="1280"/>
+			<config name="cap_buff.height" type="int" value="720"/>
+			<config name="cap_buff.crop.c.width" type="int" value="1280"/>
+			<config name="cap_buff.crop.c.height" type="int" value="720"/>
+		</module>
+		<module name="list2va">
+			<config name="width" type="int" value="1280"/>
+			<config name="height" type="int" value="720"/>
+			<config name="pix_format" type="V4L2" value="YUYV"/>
+		</module>
+		<module name="drm">
+			<config name="src_w" type="int" value="1280"/>
+			<config name="src_h" type="int" value="720"/>
+			<config name="dst_w" type="int" value="1280"/>
+			<config name="dst_h" type="int" value="720"/>
+			<config name="fourcc" type="DRM" value="YUYV"/>
+			<config name="plane_number" type="int" value="2"/>
+			<config name="null_pause" type="int" value="1"/>
+		</module>
+	</h264_logo>
+
+	<ppm_logo>
+		<module name="ppm_logo">
+			<config name="name" type="string" value="/fastlogo_file/Panasonic_logo.ppm"/>
+		</module>
+		<module name="drm">
+			<config name="src_w" type="int" value="1280"/>
+			<config name="src_h" type="int" value="720"/>
+			<config name="dst_w" type="int" value="1280"/>
+			<config name="dst_h" type="int" value="720"/>
+			<config name="fourcc" type="DRM" value="BGR888"/>
+			<config name="plane_number" type="int" value="2"/>
+			<config name="null_pause" type="int" value="1"/>
+		</module>
+	</ppm_logo>
+
+	<setting>
+		<log_level value="-1"/>
+		<home_daemon value="com.iauto.home"/>
+		<gpio_number value="457"/>
+		<gpio_level value="0"/>
+	</setting>
+</root>

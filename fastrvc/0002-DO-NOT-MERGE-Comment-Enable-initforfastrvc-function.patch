@@ -1,0 +1,45 @@
+From e4f08dc787a41a5ef8e43165d01d6b20580ac2a6 Mon Sep 17 00:00:00 2001
+From: MT2712_AndroidTeam023 <MT2712_AndroidTeam023@mediatek.com>
+Date: Wed, 3 Jan 2018 20:49:10 +0800
+Subject: [PATCH 2/2] [DO NOT MERGE]Comment: Enable initforfastrvc function
+
+Bug number:
+Product name:mt2712
+Root cause:
+Bug category:
+Solution:
+Test_Suggestion:
+
+Change-Id: Icbd87431f9f70a28f59fc894390e0cc1b93ee5b5
+---
+ patch/cfg.ini | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/patch/cfg.ini b/patch/cfg.ini
+index d72665f..713233a 100644
+--- a/patch/cfg.ini
++++ b/patch/cfg.ini
+@@ -10,7 +10,6 @@
+ 0015-Comment-Revert-drm-Revert-drm-Add-alpha-blending-sup.patch
+ 0016-Comment-Change-DRM-format-which-will-skip-alpha.patch
+ 0018-Comment-Add-qucik-boot-optimization-in-kernel.patch
+-0021-fastrvc-modify-init-process-to-initforfastrvc.patch
+ [frameworks/base]
+ 0001-Disabled-hardware-acceleration.patch
+ [packages/services/Car]
+@@ -26,12 +25,3 @@
+ 0001-Comment-Add-dual-screen-movieView.patch
+ [packages/apps/Gallery2]
+ 0001-Comment-Still-keep-gallery-when-gallery2-exits.patch
+-[external/libxml2]
+-0001-xml2-add-xml2-static-lib-for-fastrvc.patch
+-[vendor/mediatek/mt2712]
+-0005-fastrvc-modidfy.patch
+-0006-fastrvc-modify-logo-path-in-xml.patch
+-0007-fastrvc-modify-export-gpio-function-for-initfastrvc.patch
+-0008-fastrvc-modify-scan-rule-for-proc-dir.patch
+-[device/mediatek/mt2712]
+-0001-Comment-fastrvc-add-fastrvc-selinux-initflow.patch
+-- 
+2.7.4
+

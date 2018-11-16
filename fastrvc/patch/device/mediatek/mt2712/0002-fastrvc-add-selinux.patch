@@ -1,0 +1,58 @@
+From 529e57bd377d51b1d089ea826350cb3c5e15bba6 Mon Sep 17 00:00:00 2001
+From: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date: Fri, 9 Feb 2018 16:54:08 +0800
+Subject: [PATCH] fastrvc: add selinux
+
+add selinux
+Test: run on 2712
+
+Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+CR-Id: AUTO00011266
+---
+ sepolicy/kernel.te     | 5 ++++-
+ sepolicy/mediacodec.te | 1 +
+ sepolicy/ueventd.te    | 5 +++++
+ 3 files changed, 10 insertions(+), 1 deletion(-)
+ create mode 100644 sepolicy/ueventd.te
+
+diff --git a/sepolicy/kernel.te b/sepolicy/kernel.te
+index 10280bd..83ff005 100644
+--- a/sepolicy/kernel.te
++++ b/sepolicy/kernel.te
+@@ -137,7 +137,10 @@ allow kernel bootanim:file { read open getattr };
+ allow kernel bootanim:dir { search read };
+ allow kernel system_server:file { read open getattr };
+ allow kernel system_server:dir { search read };
+-#allow kernel kernel:capability { dac_override dac_read_search };
++allow kernel tmpfs:chr_file { ioctl open read getattr };
++allow kernel mediacodec:dir { search read };
+ allow kernel vendor_file:file { read open };
+ allow kernel device:dir { remove_name };
+ allow kernel mdpd_device:chr_file rw_file_perms;
++allow kernel mdp_device:chr_file { ioctl open read write getattr };
++#allow kernel kernel:capability { dac_override dac_read_search };
+diff --git a/sepolicy/mediacodec.te b/sepolicy/mediacodec.te
+index 78b0f1e..0f13605 100644
+--- a/sepolicy/mediacodec.te
++++ b/sepolicy/mediacodec.te
+@@ -4,3 +4,4 @@ allow mediacodec mediacodec_file:dir create_dir_perms;
+ allow mediacodec system_file:dir { read open };
+ allow mediacodec vpud_device:chr_file { read write ioctl open getattr };
+ allow mediacodec mdp_device:chr_file { open read write ioctl };
++allow mediacodec tmpfs:chr_file { open read write ioctl };
+\ No newline at end of file
+diff --git a/sepolicy/ueventd.te b/sepolicy/ueventd.te
+new file mode 100644
+index 0000000..6adc14f
+--- /dev/null
++++ b/sepolicy/ueventd.te
+@@ -0,0 +1,5 @@
++allow ueventd tmpfs:chr_file { relabelfrom setattr };
++allow ueventd tmpfs:dir { write add_name };
++allow ueventd video_device:chr_file { relabelto };
++allow ueventd gpu_device:chr_file { relabelto };
++allow ueventd mdp_device:chr_file { relabelto };
+\ No newline at end of file
+-- 
+1.9.1
+

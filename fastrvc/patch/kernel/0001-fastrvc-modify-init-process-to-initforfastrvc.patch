@@ -1,0 +1,26 @@
+From 725b1fa2d98159835c4474676a659139c272408a Mon Sep 17 00:00:00 2001
+From: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date: Fri, 29 Dec 2017 14:25:31 +0800
+Subject: [PATCH] fastrvc: modify init process to initforfastrvc
+
+Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+---
+ init/main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/init/main.c b/init/main.c
+index ae3996a..636aae5 100644
+--- a/init/main.c
++++ b/init/main.c
+@@ -1027,7 +1027,7 @@ static noinline void __init kernel_init_freeable(void)
+ 	 */
+ 
+ 	if (!ramdisk_execute_command)
+-		ramdisk_execute_command = "/init";
++		ramdisk_execute_command = "/initforfastrvc";
+ 
+ 	if (sys_access((const char __user *) ramdisk_execute_command, 0) != 0) {
+ 		ramdisk_execute_command = NULL;
+-- 
+1.9.1
+

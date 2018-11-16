@@ -1,0 +1,38 @@
+From 717e86cfcb9c110340cb09072e65617785892bf3 Mon Sep 17 00:00:00 2001
+From: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date: Fri, 29 Dec 2017 12:16:18 +0800
+Subject: [PATCH 4/6] fastrvc: modify logo path in xml
+
+modify logo path
+
+Change-Id: Ic25678e6ee2f926685e5a54953f6be86e5b6e023
+Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+---
+ fastRvc/fastlogo_file/fastrvc_config.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/fastRvc/fastlogo_file/fastrvc_config.xml b/fastRvc/fastlogo_file/fastrvc_config.xml
+index f2bddf9..c44c45c 100644
+--- a/fastRvc/fastlogo_file/fastrvc_config.xml
++++ b/fastRvc/fastlogo_file/fastrvc_config.xml
+@@ -152,7 +152,7 @@
+ 
+ 	<h264_logo>
+ 		<module name="h264_logo">
+-			<config name="name" type="string" value="/system/etc/fastlogo_file/mtk_parsed.h264"/>
++			<config name="name" type="string" value="/fastlogo_file/mtk_parsed.h264"/>
+ 			<config name="frame_rate" type="int" value="30"/>
+ 		</module>
+ 		<module name="v4l2_codec" dev_name="mtk-vcodec-dec">
+@@ -203,7 +203,7 @@
+ 
+ 	<ppm_logo>
+ 		<module name="ppm_logo">
+-			<config name="name" type="string" value="/system/etc/fastlogo_file/mediatek_logo_1920x1080.ppm"/>
++			<config name="name" type="string" value="/fastlogo_file/mediatek_logo_1920x1080.ppm"/>
+ 		</module>
+ 		<module name="drm">
+ 			<config name="src_w" type="int" value="1920"/>
+-- 
+1.9.1
+

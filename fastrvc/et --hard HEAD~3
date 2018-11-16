@@ -1,0 +1,468 @@
+[33mcommit 5faeee72a61395756bc872fe5ab2e9cd2b08f7a4[m[33m ([m[1;36mHEAD -> [m[1;32mleepi/master[m[33m, [m[1;31mm/leepi/master[m[33m, [m[1;31maosp/leepi/master[m[33m)[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Thu Nov 1 10:01:52 2018 +0800
+
+    <Title> modify contrast step
+    <Module> fastrvc
+    <Type> modify
+    <Content> modify contrast step
+    
+    Change-Id: I15b088bf014056c8a4b4cc261a352ddf5a2abd7c
+
+[33mcommit d1d61f14c5ab2f3c9086751b2f272dd7e936bec0[m[33m ([m[1;33mtag: leepi/release_daily/0.020001_1[m[33m, [m[1;33mtag: leepi/release_daily/0.010209_1[m[33m, [m[1;31maosp/mtk_rc3/DL_v0.020001[m[33m, [m[1;31maosp/leepi/daily[m[33m)[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Wed Oct 31 14:59:01 2018 +0800
+
+    <Title> modify contrast step for design group
+    <Module> fastrvc
+    <Type> modify
+    <Content>modify contrast step for design group
+    
+    Change-Id: I821d4af3825b0c694b4a477180933307d45c5ee3
+
+[33mcommit 60551bccf3c4caf9f56167e7d329d822e15d795d[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Wed Oct 31 10:29:20 2018 +0800
+
+    <Title> modify logo and camera switch
+    <Module>fastrvc
+    <Type> modify
+    <Content>modify logo and camera switch
+    
+    Change-Id: I01aae5a80111a92b13754db7191f4a3dbe221239
+
+[33mcommit 1e2b2ef3af28eff2598f06824d0f08261a6e567d[m[33m ([m[1;31maosp/mtk_rc3/WL_v0.020000[m[33m)[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Tue Oct 30 20:42:50 2018 +0800
+
+    fix: notify UI display mode when UI call display interface every time
+    
+    Change-Id: Id2d30f5fb08f2ac638218b1c316b0d9b5e298e9b
+
+[33mcommit 002de7f4f8bf3e20fc0e3c634206b7d90c8df6f4[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Tue Oct 30 19:35:24 2018 +0800
+
+    feat: add new function stopAnimatedLogo
+    
+    Change-Id: I6f471034bd955dadb3c2a812801c3c63dcae65df
+
+[33mcommit 5d134a283b875fb84749dc52657fb5b9cddea769[m[33m ([m[1;33mtag: leepi/release_daily/0.010208_1[m[33m, [m[1;31maosp/mtk_rc3/DL_v0.010209[m[33m)[m
+Merge: 6bfb508 aad0703
+Author: Zhijie Pan <panzhijie@iauto.com>
+Date:   Tue Oct 30 09:43:23 2018 +0800
+
+    Merge "<Title> modify user id according to android setting <Module> fastrvc <Type> modify <Content> modify user id according to android setting" into leepi/master
+
+[33mcommit aad0703429da2c3561341fb0429c62bd7f531295[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Tue Oct 30 09:11:24 2018 +0800
+
+    <Title> modify user id according to android setting
+    <Module> fastrvc
+    <Type> modify
+    <Content> modify user id according to android setting
+    
+    Change-Id: I9663dba38a98bae7e2b4f7dbee5ad25b3932e6d4
+
+[33mcommit 6bfb5087157928f41a9a8d7de54b6eca396faac8[m[33m ([m[1;31maosp/mtk_rc3/DL_v0.010208[m[33m)[m
+Author: maliuping <maliuping@iauto.com>
+Date:   Mon Oct 29 18:30:30 2018 +0800
+
+    feat: disable guide line and caution in normal RVC
+    
+    Change-Id: Ib9aad8812cea84d1c8e7dfc54f28df03c286fe5b
+
+[33mcommit 6d7f74197e878f52b67294069ab1b4be5b3913d5[m[33m ([m[1;31maosp/mtk_rc3/DL_v0.010207[m[33m)[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Mon Oct 29 12:33:24 2018 +0800
+
+    <Title> add multi-user backlight recovery
+    <Module> fastrvc
+    <Type> add
+    <Content> add multi-user backlight recovery
+    
+    Change-Id: Ia19bbe49fe57f04dd94d1378c14172518c2260d5
+
+[33mcommit ef1e4e7629c60304391e1276602398b2a5339174[m[33m ([m[1;31maosp/mtk_rc3/DL_v0.010206[m[33m, [m[1;31maosp/mtk_rc3/DL_v0.010205[m[33m, [m[1;31maosp/mtk_rc3/DL_v0.010204[m[33m)[m
+Merge: bf4e60c 434db4c
+Author: yuliangde yuliangde <yuliangde@suntec.net>
+Date:   Sat Oct 27 22:00:27 2018 +0800
+
+    Merge "feat: modify socket command" into leepi/master
+
+[33mcommit 434db4c58763bf8fb473c9bc9c624a207b0b9138[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Sat Oct 27 21:45:14 2018 +0800
+
+    feat: modify socket command
+    
+    Change-Id: I04c3a6db4b09871023bef9b25d911a6b3b010fc7
+
+[33mcommit bf4e60cc0f5df4d754153634f669e14ecf4aad34[m[33m ([m[1;31maosp/mtk_rc3/DL_v0.010203[m[33m, [m[1;31maosp/mtk_rc3/DL_v0.010202[m[33m)[m
+Author: dingyong <dingyong2@pset.suntec.net>
+Date:   Fri Oct 26 20:18:12 2018 +0800
+
+    [Title]fastrvc
+    [Module]opening
+    [Type]Modify
+    [Content]Opening display disappear from home start ok
+    
+    Change-Id: Ie1102c99301915c82c63dcc0213c0102e354a5c4
+
+[33mcommit 394f0aacf6a6d3e259feefff5118ae8810e3adc4[m
+Author: dingyong <dingyong2@pset.suntec.net>
+Date:   Fri Oct 26 17:59:27 2018 +0800
+
+    [Title]fastrvc
+    [Module]fastrvc
+    [Type]Modify
+    [Content]delete sleep 1ms
+    
+    Change-Id: Ic1275dc7009ddc74a22afc4b7bb296d48410d202
+
+[33mcommit e01f4a68644acc7c0758ea730dbf566dc505cc28[m[33m ([m[1;31maosp/mtk_rc3/DL_v0.010201[m[33m)[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Fri Oct 26 15:41:53 2018 +0800
+
+    feat: display guideline and caution by MTK patch aa88cfc.diff
+    
+    Change-Id: I285ebd0d044f92590cb16eebe91adfd79bdc0f3d
+
+[33mcommit 71f5e09d85d4e8746374e1b5c5f26afab3ceddc6[m
+Author: maliuping <maliuping@iauto.com>
+Date:   Fri Oct 26 12:12:30 2018 +0800
+
+    [Title] add OnUiReadAck
+    [Module] Camera
+    [Type] add
+    [Content] add OnUiReadAck notice UI
+    
+    Change-Id: I2a122afa21876fd831f319cf69f274e4169e2853
+
+[33mcommit a7864fb11ef2b2c555d7b9df7c37ae7e04c5180b[m[33m ([m[1;31maosp/mtk_rc3/WL_v0.010200[m[33m, [m[1;31maosp/mtk_rc3/DL_v0.010108[m[33m)[m
+Merge: f5d4921 a39c08f
+Author: Qingwei Wang <wangqingwei@pset.suntec.net>
+Date:   Wed Oct 24 16:58:01 2018 +0800
+
+    Merge "[Title] Move /data/bootFinished to /data/vendor/bootFinished [Module] SELinux, fastRVC [Type] Modify; [content] Change file path from /data/bootFinished to /data/vendor/bootFinished" into leepi/master
+
+[33mcommit a39c08f9052b7325f6adf4fc1bd5dfe2bea3de03[m
+Author: LiCheng <licheng@pset.suntec.net>
+Date:   Mon Oct 22 12:01:15 2018 +0800
+
+    [Title] Move /data/bootFinished to /data/vendor/bootFinished
+    [Module] SELinux, fastRVC
+    [Type] Modify;
+    [content] Change file path from /data/bootFinished to /data/vendor/bootFinished
+    
+    Change-Id: I4c7b4a4e98ca6b1871d91b815c2490f018ea00a2
+
+[33mcommit f5d492166b342a128443098c308c07b52325950a[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Wed Oct 24 14:36:31 2018 +0800
+
+    <opening logo> modify static logo to animation logo
+    
+    Change-Id: I7978da01eb38a3532032e2f9c2ca4ac0de51527a
+
+[33mcommit 6796f8e4be9a0b07f8f9cf1bf6c3dd528b116d71[m[33m ([m[1;31maosp/mtk_rc3/DL_v0.010107[m[33m)[m
+Author: wangjun4 <wangjun4@iauto.com>
+Date:   Wed Oct 24 10:59:38 2018 +0800
+
+    [Title] modify fastrvc build error
+    
+    [Module] Camera/boot logo
+    [Type] modify
+    [Content] modify fastrvc config/logo file path
+    
+    Change-Id: I44076aba2736b063bc7e100eef1175d4b1c528d5
+
+[33mcommit 4f41833d7d6f05768aee2ad23f8bc00565c124d5[m
+Author: caolei <caolei@iauto.com>
+Date:   Mon Oct 22 20:55:43 2018 +0800
+
+    [Title] modify fastrvc build error
+    [Module] Camera/boot logo
+    [Type] modify
+    [Content] modify fastrvc config/logo file path
+    
+    Change-Id: Iec378193f5d5ea96f4009fa85b4108fd41057297
+
+[33mcommit 0b46c88faf14f7ab49a74fc35b4da05e2d6e584f[m[33m ([m[1;31maosp/mtk_rc3/DL_v0.010106[m[33m, [m[1;31maosp/Leepi_MTK_GA_Merge[m[33m)[m
+Author: maliuping <maliuping@iauto.com>
+Date:   Mon Oct 22 10:33:28 2018 +0800
+
+    [Title] modify fastrvc_config LOCAL_SRC_FILES
+    [Module] Camera
+    [Type] modify
+    [Content] modify fastrvc_config LOCAL_SRC_FILES as TARGET_PRODUCT
+    
+    Change-Id: Ib8911fadf66afef1f8236844c269ae9b38328e58
+
+[33mcommit 0387196a8a4d9d9dec94902fd3fcf4bbe4974b36[m[33m ([m[1;31maosp/Leepi_MTK_GA_Previse[m[33m)[m
+Author: huangyongjian <huangyongjian@pset.suntec.net>
+Date:   Sat Oct 13 18:01:38 2018 +0800
+
+    [Title]: modify reverse gpio;
+    [Module]: gpio;
+    [Type]:modify;
+    [Content]:
+      1, modify reverse gpio;
+    
+    Change-Id: If176b0d45f1bf013ab918527e41e4640ddc06ba6
+
+[33mcommit 13ec994b7e5b720e28821cfb4c4277c1021613f8[m
+Author: wangjun4 <wangjun4@iauto.com>
+Date:   Thu Oct 11 13:42:46 2018 +0800
+
+    [fix][wangjun4] fix meger bug
+    
+    Change-Id: I8372eee428a3387e75494465d4f1eecf23560c7c
+
+[33mcommit 2b742ff3ce77bb86f13a2c97cd11a9c008d69644[m
+Author: maliuping <maliuping@iauto.com>
+Date:   Mon Sep 17 15:06:51 2018 +0800
+
+    display process changes
+    
+    Change-Id: Iaff0dd3f717c0e3cccc7cf07782498607d36b113
+
+[33mcommit 7321cb007ab493bd5c694d65bb7a8281943c3639[m
+Author: maliuping <maliuping@iauto.com>
+Date:   Wed Aug 29 17:55:51 2018 +0800
+
+    REV eliminate shake
+    
+    Change-Id: I70ad5bb34f88d8b1a5845f6d36b870cc49c9075b
+
+[33mcommit 8036631b314ec35294dfaead8bc1566f12056706[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Tue Sep 4 16:06:33 2018 +0800
+
+    add one step for backlight; [fastrvc]: adjust backlight ok; [Result]: PASS;
+    
+    Change-Id: I1b3d74876676e15bce3a14e5f8a546b23aa126a1
+
+[33mcommit 9428978f896277d919b15bf9956df06fc64ba3f2[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Thu Aug 23 10:51:08 2018 +0800
+
+    modify the pq register value; [fastrvc]: contrast value is ok; [Result]: PASS
+    
+    Change-Id: I7d2cc439875036b39b30e33d1ffaa6f2e53b6478
+
+[33mcommit 39ad6f4df4d5b6788131e86ad127db78442948e3[m
+Author: wangjun4 <wangjun4@iauto.com>
+Date:   Tue Aug 21 14:25:50 2018 +0800
+
+    add new lunch Leepi_14s
+    
+    Change-Id: I66cf7cb8eeb7eed4477ab876af4fe22dea3ee66d
+
+[33mcommit c1b14c82c0d2ae7c66fdac2fd412889198949e7a[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Mon Aug 20 11:00:32 2018 +0800
+
+    modify the management of the display mode and add the command of request display mode
+    
+    Change-Id: I1b568213ef43b7fcbfb0e17fb7bb0c7a6dad7417
+
+[33mcommit 7d1191961411476b4a36c7ba15556d0e8dcab07c[m
+Author: wangjun4 <wangjun4@iauto.com>
+Date:   Thu Aug 16 11:23:36 2018 +0800
+
+    add new lunch Leepi_15s
+    
+    Change-Id: Id59aea7fbbe671e9af5a3b69fe37bc98049c28ff
+
+[33mcommit 1f7ee6bb79a595cdbcba39a3aa08da393a995d63[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Wed Aug 15 17:58:58 2018 +0800
+
+    modify GPIO value for REV on/off
+    
+    Change-Id: I2594ae8c974db77e7cbe98697114015ff4965f64
+
+[33mcommit 08e72cd7e6037b2da8fe1d55e79fa73a2a619486[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Tue Aug 14 10:58:47 2018 +0800
+
+    add backlight recovery process [fastrvc]： recovery the backlight ok; [Result]:PASS
+    
+    Change-Id: I0ee4ffec97fed8337cc750e919067afecd282120
+
+[33mcommit 2e672594cb45c9734d44b51d135ffd7f3408f692[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Tue Aug 7 17:31:26 2018 +0800
+
+    delete unuse code and modify config file according to the design
+    
+    Change-Id: I0fcbb88fe9640d19023ed5ace11181e9c289ffe6
+
+[33mcommit c66f048d4a79ff530f0adb77ed4f1c93e3848fc0[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Wed Aug 1 16:29:31 2018 +0800
+
+    change the static logo file; [fastrvc]: openning show the logo ok; [Result]:PASS
+    
+    Change-Id: Ib065066bb81fad1561a9e51ceeffb89976afa4ff
+
+[33mcommit ba26f8dc1649d11c7fc1b94d7bb3867d2ab027a4[m
+Author: zhangjun <zhang_jun@iauto.com>
+Date:   Mon Jul 30 12:20:10 2018 +0800
+
+    add socket
+    
+    Change-Id: Ifbe2c97b66b912b2edce128fcc7e331c43d11698
+
+[33mcommit 0c74eedd567fd711119fb1c3aab0ce9dacb1f2fd[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Fri Jul 20 10:23:49 2018 +0800
+
+    fix the reverse gpio number;
+    
+    Change-Id: Idfac94af3deffc1681e05b6764de197a61fc63d7
+
+[33mcommit 1b3ec4d8a14cbdeb1b290c7a19687488986b798e[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Tue Jul 17 10:45:41 2018 +0800
+
+    add Leepi lunch logo picture file path [fastrvc]: make no error report; [Resutl]: PASS
+    
+    Change-Id: Ie8a45ddc1870ad59724b73b31c73a5160becef15
+
+[33mcommit 904fe3a3e130f66461215305fa3e1def7ea11255[m
+Author: yangkaining <yangkaining@pset.suntec.net>
+Date:   Fri Jul 13 14:06:00 2018 +0800
+
+    fix the merge conflic from E3
+    
+    Change-Id: I04deccb9fe735e3e122ba0924ff0f5b0f4c91382
+
+[33mcommit a48654241e503ce3f3fc182ad7d9f9113780592b[m[33m ([m[1;31maosp/Leepi_MTK_GA_Back[m[33m)[m
+Author: Chuankun Dong <chuankun.dong@mediatek.com>
+Date:   Fri Aug 3 16:25:42 2018 +0800
+
+    fastrvc: transfer from kernel domain to own domain
+    
+    - re-run initfastrvc before exit
+    Test: OK
+    
+    Change-Id: If209679aedad325f668a133962ebe21d9735ca36
+    Signed-off-by: Chuankun Dong <chuankun.dong@mediatek.com>
+    CR-Id: AUTO00019764
+    (cherry picked from commit 1a41d1604bd12fe39540323edc05957c4f947060)
+
+[33mcommit f36f42108ca430e819ece2d3910327aca532cb35[m
+Author: Chuankun Dong <chuankun.dong@mediatek.com>
+Date:   Thu Jul 12 15:25:07 2018 +0800
+
+    fastrvc: add boot profile log to dmesg
+    
+    for auto profile boot time, need log to dmesg
+    Test: PASS
+    
+    Change-Id: Id6e57651e1b9ad5fa5f5c196d68a491abda3c89b
+    Signed-off-by: Chuankun Dong <chuankun.dong@mediatek.com>
+    CR-Id: AUTO00017353
+
+[33mcommit 532ce12ead4b08ab9e5523e6d010e248af22ccdf[m[33m ([m[1;31maosp/Leepi_MTK_RC3_Back[m[33m)[m
+Author: Chuankun Dong <chuankun.dong@mediatek.com>
+Date:   Thu May 17 10:53:29 2018 +0800
+
+    fastrvc: sync code from linux project
+    
+    - sync code from linux code
+    Test: OK
+    
+    Change-Id: I5ae98619dba741c2fe12dffe023f7862edabd9cf
+    Signed-off-by: Chuankun Dong <chuankun.dong@mediatek.com>
+    CR-Id: AUTO00016124
+
+[33mcommit 596cb3fb275dbc447dbb4d0967316978efa82d24[m
+Author: Chuankun Dong <chuankun.dong@mediatek.com>
+Date:   Thu Apr 26 09:47:58 2018 +0800
+
+    fastrvc: for recovery mode
+    
+    - modify for recovery mode
+    Test: OK
+    
+    Change-Id: I259835dc9ec98bd5d8d22bb3065e0aac0c165732
+    Signed-off-by: Chuankun Dong <chuankun.dong@mediatek.com>
+    CR-Id: AUTO00016124
+
+[33mcommit d4251956642ba31d376c62f84a84f27ff91feb8e[m[33m ([m[1;33mtag: Leepi_MTK_E3_20180508[m[33m, [m[1;31maosp/mtk_e2/DL_v0.000046[m[33m, [m[1;31maosp/mtk_e2/DL_v0.000045[m[33m, [m[1;31maosp/mtk_e2/DL_v0.000044[m[33m, [m[1;31maosp/Leepi_MTK_E3_NoMerge[m[33m, [m[1;31maosp/Leepi_MTK_E3_Back[m[33m)[m
+Author: Chuankun Dong <chuankun.dong@mediatek.com>
+Date:   Thu Apr 19 14:48:23 2018 +0800
+
+    fastrvc: change gpio number for mt2712p1v1 board
+    
+    - mt2712p1v1 board use gpio135 to show camera
+    Test: OK
+    
+    Change-Id: I8e83e587b2f059c98fb3eb9dc470c3dd50eba25e
+    Signed-off-by: Chuankun Dong <chuankun.dong@mediatek.com>
+    CR-Id: AUTO00016124
+
+[33mcommit 50e2ed9b97c9ab576b4796717f2a4268e96ec86d[m
+Author: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date:   Wed Mar 7 10:53:58 2018 +0800
+
+    fastrvc: improve fastrvc init flow new
+    
+    it cost so much time for android fastrvc
+    modify fastrvc init flow for fastrvc enhancement
+    Test: ok
+    
+    Change-Id: I92ab0bd91d2573d27015c0f2bbf83ce951e2fd86
+    Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+    CR-Id: AUTO00011266
+
+[33mcommit 5361d24fcb91f81c62c6639e3027853799533304[m
+Author: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date:   Thu Mar 1 13:41:54 2018 +0800
+
+    Revert "fastrvc: improve fastrvc init flow"
+    
+    it cost so much time for android fastrvc
+    modify fastrvc init flow for fastrvc enhancement
+    Test: ok
+    
+    Change-Id: I18e1821beb66965bc08a3e36af97feb9ce9e7051
+    Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+    CR-Id: AUTO00011266
+
+[33mcommit 9d2fb670c569aa980eb079b688f8b695b0971681[m
+Author: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date:   Wed Feb 28 17:51:46 2018 +0800
+
+    fastrvc: improve fastrvc init flow
+    
+    it cost so much time for android fastrvc
+    modify fastrvc init flow for fastrvc enhancement
+    Test: ok
+    
+    Change-Id: I3d7d838ba35583fbb4b01410555abe7218568539
+    Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+    CR-Id: AUTO00011266
+
+[33mcommit 6896aa98e0636e38344a3dfa358e87ba652c1b44[m
+Author: Wei Wen <wei.wen@mediatek.com>
+Date:   Wed Feb 28 10:20:51 2018 +0800
+
+    [MT2712 Android]: submit fastrvc first version from 20180227 codebase
+    
+    add fastrvc source
+    Test: Pass
+    
+    Change-Id: Ida8434888720a31098e026c0c08d72bee9461372
+    Signed-off-by: Wei Wen <wei.wen@mediatek.com>
+    CR-Id: AUTO00014843
+
+[33mcommit 239c979123bed31213cf5f3c73c7b1d0decfa152[m
+Author: Xiuqin Hu <xiuqin.hu@mediatek.com>
+Date:   Wed Feb 28 09:39:31 2018 +0800
+
+    Initial empty repository

@@ -1,0 +1,34 @@
+From 699e58e6ea58429d41af3f7e1d2897c543014018 Mon Sep 17 00:00:00 2001
+From: Xiaolei Gao <xiaolei.gao@mediatek.com>
+Date: Fri, 9 Feb 2018 09:49:41 +0800
+Subject: [PATCH] xml2: modify xml2 option for fastrvc
+
+modify xml2 option for fastrvc
+Test: run on 2712
+
+Change-Id: Icbfff05d0f1caba335fc3891c855d1e2600a78c5
+Signed-off-by: Xiaolei Gao <xiaolei.gao@mediatek.com>
+CR-Id: AUTO00011266
+---
+ include/libxml/xmlversion.h | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/include/libxml/xmlversion.h b/include/libxml/xmlversion.h
+index eb18ea0..c4d07e5 100644
+--- a/include/libxml/xmlversion.h
++++ b/include/libxml/xmlversion.h
+@@ -290,10 +290,8 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
+  * This is disabled when libxml2 is built for the VNDK.
+  * libicuuc.so isn't available in the VNDK.
+  */
+-#ifndef __ANDROID_VNDK__
++#if 0
+ #define LIBXML_ICU_ENABLED
+-#else
+-#undef LIBXML_ICU_ENABLED
+ #endif
+ 
+ /**
+-- 
+1.9.1
+
