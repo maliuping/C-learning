@@ -6,7 +6,7 @@
 #include <math.h>
 
 
-int main() {
+int process() {
 
    /*  extern char **environ;
     int i;
