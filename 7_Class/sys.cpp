@@ -1,26 +1,53 @@
 #include "sys.h"
 
-    /**
-     * exercise
-     * P159:5.5
-     */
-void ScoresToLevel(int grade,std::string *lettergrade) {
+/*****************************Sales****************************************/
+Sales_data::Sales_data() {
+    units_sold = 0;
+    revenue = 0.0;// it do not initialise when variable is defined in class
+}
 
-    if (grade <= 100 && grade >=0) {
-            if (grade < 60) {
-                *lettergrade = scores[0];
-            } else {
-                *lettergrade = scores[(grade-50)/10]; // get level
+std::string Sales_data::isbn() const {
+    return bookNo;
+}
 
-                if ((grade != 100) && ((grade % 10) < 3)) { // less than 3, add-
-                    *lettergrade += "-";
-                } else if ((grade != 100) && ((grade % 10) > 7)) { // more than 7, add+
-                    *lettergrade += "+";
-                }
-            }
-            std::cout << "对应等级:" << *lettergrade << std::endl;
-        } else { // Beyond the scope
-            std::cout << "error: input beyond the scope!" << std::endl;
-        }
+Sales_data& Sales_data::combine(const Sales_data &rhs) {
 
+    units_sold += rhs.units_sold; // the number of sales
+    revenue += rhs.revenue; // the total price
+    return *this;
+}
+
+std::istream& read (std::istream &is,Sales_data &item) {
+    double price = 0.0;
+    is >> item.bookNo >> item.units_sold >> price;
+    item.revenue = price * item.units_sold;
+
+    return is;
+}
+
+std::ostream& print (std::ostream &os,const Sales_data &item) {
+    os << item.isbn() << " " << item.units_sold << " " <<item.revenue;
+
+    return os;
+}
+
+Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
+    Sales_data sum = lhs; // copy data members of lhs to sum
+    sum.combine(rhs); //add data members of rhs to sum
+
+    return sum;
+}
+
+
+/*****************************Person****************************************/
+std::string Person_data::getname() const {
+    return m_name;
+}
+
+std::string Person_data::getaddress() const {
+    return m_address;
+}
+
+ void Person_data::showname() {
+        std::cout <<"name: "<<m_name <<" "<<"address: "<<m_address <<std::endl;
 }

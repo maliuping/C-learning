@@ -1,26 +1,30 @@
 #include <cctype>
 #include "sys.h"
 
-
-Sales_data::Sales_data() {
-    units_sold = 0;
-    revenue = 0.0;// it do not initialise when variable is defined in class
-}
-
 int main(int argc,char *argv[]) {
 
     Sales_data total;
-    if(std::cin >> total.bookNo >> total.units_sold >> total.revenue) {
-        Sales_data trans;
-        while (std::cin >> trans.bookNo >> trans.units_sold >> trans.revenue) {
-            if (trans.bookNo == total.bookNo) {
-                total.units_sold += trans.units_sold;
+    Sales_data trans;
+    Sales_data sum;
+    double price = 0.0;
+    std::istream is();
+
+    if(std::cin >> total.bookNo >> total.units_sold >> price) {
+    //if(read(is,total)) {
+        total.revenue = price * total.units_sold; // calculate the total price
+
+        while (std::cin >> trans.bookNo >> trans.units_sold >> price) {
+        //while (read(is,trans)) {
+            trans.revenue = price * trans.units_sold; // Calculate the total price
+            if (trans.isbn() == total.isbn()) {
+                //sum = total.combine(trans);
+                sum = add(total,trans);
             } else {
-                std::cout << total.bookNo << " "<< total.units_sold <<" "<< total.revenue <<std::endl;//打印前一本书的销售结果
+                std::cout << total.isbn() << " "<< total.units_sold <<" "<< total.revenue <<std::endl;// print the sales price of the previous book
                 total = trans;
             }
         }
-        std::cout << total.bookNo <<" "<< total.units_sold <<" "<<total.revenue <<std::endl;
+        std::cout << sum.isbn() <<" "<< sum.units_sold <<" "<<sum.revenue <<std::endl;
     } else {
         std::cout << "No data!"<<std::endl;
         return -1;
