@@ -7,15 +7,14 @@ int main(int argc,char *argv[]) {
     Sales_data trans;
     Sales_data sum;
     double price = 0.0;
-    std::istream is();
 
-    if(std::cin >> total.bookNo >> total.units_sold >> price) {
-    //if(read(is,total)) {
-        total.revenue = price * total.units_sold; // calculate the total price
+    //if(std::cin >> total.bookNo >> total.units_sold >> price) {
+    if(read(std::cin,total)) {
+        //total.revenue = price * total.units_sold; // calculate the total price
 
-        while (std::cin >> trans.bookNo >> trans.units_sold >> price) {
-        //while (read(is,trans)) {
-            trans.revenue = price * trans.units_sold; // Calculate the total price
+        //while (std::cin >> trans.bookNo >> trans.units_sold >> price) {
+        while (read(std::cin,trans)) {
+            //trans.revenue = price * trans.units_sold; // Calculate the total price
             if (trans.isbn() == total.isbn()) {
                 //sum = total.combine(trans);
                 sum = add(total,trans);
