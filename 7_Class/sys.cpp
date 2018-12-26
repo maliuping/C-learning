@@ -31,13 +31,16 @@ std::ostream& print (std::ostream &os,const Sales_data &item) {
     return os;
 }
 
-Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
+/* Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
     Sales_data sum = lhs; // copy data members of lhs to sum
     sum.combine(rhs); //add data members of rhs to sum
 
     return sum;
-}
+} */
 
+void add(Sales_data &lhs, Sales_data &rhs) {
+    lhs.combine(rhs); //add data members of rhs to sum
+}
 
 /*****************************Person****************************************/
 std::string Person_data::getname() const {

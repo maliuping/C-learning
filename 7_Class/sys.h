@@ -27,8 +27,8 @@ protected:
 
 std::istream& read (std::istream &is,Sales_data &item);
 std::ostream& print (std::ostream &os,const Sales_data &item);
-Sales_data add(const Sales_data &lhs, const Sales_data &rhs);
-
+//Sales_data add(const Sales_data &lhs, const Sales_data &rhs);
+void add(Sales_data &lhs, Sales_data &rhs);
 
 /*****************************Person****************************************/
 class Person_data {
