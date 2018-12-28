@@ -10,19 +10,28 @@
 /*****************************Sales****************************************/
 class Sales_data {
 
-public:
-    std::string bookNo;
-    unsigned units_sold;
-    double revenue;
+    friend std::istream& read (std::istream &is,Sales_data &item);
+    friend std::ostream& print (std::ostream &os,const Sales_data &item);
+    friend void add(Sales_data &lhs, Sales_data &rhs);
 
+public:
     //constructor fun
     Sales_data();
+    Sales_data(std::string s,unsigned SalesNum,double price) \
+        :bookNo(s),units_sold(SalesNum),revenue(SalesNum*price){};
+    Sales_data(std::istream &is);
 
     std::string isbn() const;
+    double avg_price() const;
     Sales_data& combine(const Sales_data &rhs);
 
 private:
+    std::string bookNo;
+    unsigned units_sold; // SalesNumber
+    double revenue; // TotalPrice
+
 protected:
+
 };
 
 std::istream& read (std::istream &is,Sales_data &item);

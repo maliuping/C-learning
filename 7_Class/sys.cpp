@@ -6,8 +6,20 @@ Sales_data::Sales_data() {
     revenue = 0.0;// it do not initialise when variable is defined in class
 }
 
+Sales_data::Sales_data(std::istream &is) {
+    read(is,*this);
+}
+
 std::string Sales_data::isbn() const {
     return bookNo;
+}
+
+double Sales_data::avg_price() const{
+    if (units_sold) {
+        return revenue / units_sold;
+    } else {
+        return 0;
+    }
 }
 
 Sales_data& Sales_data::combine(const Sales_data &rhs) {
@@ -26,7 +38,8 @@ std::istream& read (std::istream &is,Sales_data &item) {
 }
 
 std::ostream& print (std::ostream &os,const Sales_data &item) {
-    os << item.isbn() << " " << item.units_sold << " " <<item.revenue;
+    os << "SerialNumber:" << item.isbn() << " " << "SalesNumber:" << item.units_sold << " "\
+        << "TotalPrice:" << item.revenue << " " <<"AvgPrice:"<< item.avg_price();
 
     return os;
 }
