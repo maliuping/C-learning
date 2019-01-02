@@ -62,4 +62,41 @@ protected:
 
 };
 
+/*****************************Screen****************************************/
+
+class Screen {
+
+public:
+    using pos = std::string::size_type;
+
+    Screen() =default;
+    Screen(pos h,pos w):height(h),width(w),contents(h*w,'') {};
+    Screen(pos h,pos w,char c):height(h),width(w),contents(h*w,c) {};
+    char get() {
+        return contents[cursor];
+    }
+    char get(pos h,pos w);
+    Screen& move(pos r, pos c);
+    void some_member() const;
+
+private:
+    pos height = 0;
+    pos width = 0;
+    std::string contents;
+    unsigned cursor = 0; // cursor
+    mutable unsigned access_ctr = 0; // variable data member
+
+protected:
+
+};
+
+class Window_mgr {
+public:
+
+private:
+    std::vector<Screen> screens { Screen(80,100,' ') };
+
+protected:
+};
+
 #endif

@@ -67,3 +67,8 @@ std::string Person_data::getaddress() const {
  void Person_data::showname() {
         std::cout <<"name: "<<m_name <<" "<<"address: "<<m_address <<std::endl;
 }
+
+/*****************************Screen****************************************/
+void Screen::some_member() {
+    ++access_ctr;// Save a count value to record the number of calls to a member function
+}
