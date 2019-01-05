@@ -69,6 +69,28 @@ std::string Person_data::getaddress() const {
 }
 
 /*****************************Screen****************************************/
-void Screen::some_member() {
+
+char Screen::get(pos h, pos w) {
+    pos row = w * width; // calculated row position
+    return contents[row+h]; // returns characters for a given column
+}
+
+Screen& Screen::move(pos r, pos c) {
+    pos row = r * width; // calculated row position
+    cursor = row + c; // move the cursor to the specified column within a row
+    return *this; // return object
+}
+
+void Screen::some_member() const {
     ++access_ctr;// Save a count value to record the number of calls to a member function
+}
+
+inline Screen& Screen::set(char c) {
+    contents[cursor] = c;
+    return *this;
+}
+
+inline Screen& Screen::set(pos r, pos col, char c) {
+    contents[r*width + col] = c;
+    return *this;
 }

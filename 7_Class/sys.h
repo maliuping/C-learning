@@ -70,7 +70,7 @@ public:
     using pos = std::string::size_type;
 
     Screen() =default;
-    Screen(pos h,pos w):height(h),width(w),contents(h*w,'') {};
+    Screen(pos h,pos w):height(h),width(w),contents(h*w,' ') {};
     Screen(pos h,pos w,char c):height(h),width(w),contents(h*w,c) {};
     char get() {
         return contents[cursor];
@@ -78,6 +78,8 @@ public:
     char get(pos h,pos w);
     Screen& move(pos r, pos c);
     void some_member() const;
+    Screen& set(char c);
+    Screen& set(pos r, pos c, char c);
 
 private:
     pos height = 0;
@@ -97,6 +99,7 @@ private:
     std::vector<Screen> screens { Screen(80,100,' ') };
 
 protected:
+
 };
 
 #endif
